@@ -1,16 +1,16 @@
-import React from "react";
-import Header from "./header/Header";
-import Terms from "./terms/Terms";
-import Footer from "./footer/Footer";
+import React from 'react';
+import Header from './header/Header';
+import Content from './content/Content';
+import Footer from './footer/Footer';
 
 function App() {
-   return (
-      <div>
-         <Header />
-         <Terms />
-         <Footer />
-      </div>
-   );
+  return (
+    <div>
+      <Header />
+      <Content />
+      <Footer />
+    </div>
+  );
 }
 
 export default App;
