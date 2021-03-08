@@ -1,5 +1,5 @@
 :root {
-  --title-color: #ffc75f;
+  --title-color: #fdb827;
   --content-color: #edeceb;
   --accent-color1: #ff5e78;
   --accent-color2: #f2a154;
@@ -42,7 +42,6 @@ body {
   flex-wrap: wrap;
   justify-content: space-evenly;
   margin: 1.5rem;
-  max-width: 90%;
   padding: 1rem 0 0 0;
 }
 
@@ -50,7 +49,7 @@ body {
   text-align: center;
   max-width: 20rem;
   padding: 2rem;
-  border-radius: 3px;
+  border-radius:16px;
   background-color: #fff;
   transition: all 100ms ease-in-out;
   position: relative;
