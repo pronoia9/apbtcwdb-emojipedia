@@ -1,5 +1,5 @@
 import React from 'react';
-import Entry from './entries/Entry';
+import Entry from './Entry';
 import emojipedia from '../../emojipedia';
 
 function Content() {
