@@ -1,50 +1,90 @@
+:root {
+  --title-color: #ffc75f;
+  --content-color: #edeceb;
+  --accent-color1: #ff5e78;
+  --accent-color2: #f2a154;
+  --accent-color3: #fb743e;
+  --accent-color3: #91091e;
+}
+
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Comfortaa', sans-serif;
   font-weight: 400;
   line-height: 1.666;
-  background: #c0d2d4;
-  color: #555;
+  background-color: var(--content-color);
+  margin: -5vw 0 0 0;
 }
 
-h1 {
-  font-weight: 900;
-  font-size: 500%;
-  text-align: center;
-  margin-top: 4rem;
+/* * * * * * * * * * * * * * * *  HEADER  * * * * * * * * * * * * * * * */
+.sh-titlebar {
+  position: relative;
+  height: 20rem;
+  /* background-image: linear-gradient(var(--title-color), var(--content-color)); */
+  background-color: var(--title-color);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 5vw));
+}
+
+.sh-title {
+  margin: 0;
+  padding: 8rem 0 0 0;
   color: #fff;
-  line-height: 1.2;
+  text-align: center;
 }
 
-h1 span {
-  padding: 5px 15px;
-  background: #2ec2b0;
+.sh-title h1,
+.sh-title p {
+  margin: 0;
 }
 
+/* * * * * * * * * * * * *  CONTENT / ENTRIES  * * * * * * * * * * * * * */
 .dictionary {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  margin: 4rem auto;
+  margin: 1.5rem;
   max-width: 90%;
+  padding: 1rem 0 0 0;
 }
 
 .dictionary > .term {
   text-align: center;
   max-width: 20rem;
-  margin-bottom: 3rem;
   padding: 2rem;
   border-radius: 3px;
-  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.05), 0 5px 20px rgba(0, 0, 0, 0.1);
   background-color: #fff;
   transition: all 100ms ease-in-out;
+  position: relative;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.dictionary > .term:before,
+.dictionary > .term:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  top: 10px;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  -moz-border-radius: 100px / 10px;
+  border-radius: 100px / 10px;
+}
+.dictionary > .term:after {
+  right: 10px;
+  left: auto;
+  -webkit-transform: skew(8deg) rotate(3deg);
+  -moz-transform: skew(8deg) rotate(3deg);
+  -ms-transform: skew(8deg) rotate(3deg);
+  -o-transform: skew(8deg) rotate(3deg);
+  transform: skew(8deg) rotate(3deg);
 }
 
 .dictionary > .term > dt {
   margin-bottom: 1rem;
-}
-
-dt {
-  color: #2ec2b0;
   line-height: 1;
 }
 
@@ -80,4 +120,13 @@ dd dl {
 
 dd dl .term {
   margin-bottom: 1rem;
+}
+
+/* * * * * * * * * * * * * * * *  DYNAMIC  * * * * * * * * * * * * * * * */
+.color-a1 {
+  color: var(--accent-color1);
+}
+
+.color-a2 {
+  color: var(--accent-color2);
 }

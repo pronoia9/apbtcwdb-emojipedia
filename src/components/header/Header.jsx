@@ -2,10 +2,13 @@ import React from 'react';
 
 function Header() {
   return (
-    <div>
-      <h1>
-        <span>emojipedia</span>
-      </h1>
+    <div className='sh-titlebar-container'>
+      <header className='sh-titlebar'>
+        <div className='sh-title'>
+          <h1>emojipedia</h1>
+          <p>an encylopedia for emojis</p>
+        </div>
+      </header>
     </div>
   );
 }
